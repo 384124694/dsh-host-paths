@@ -1,0 +1,10 @@
+# dsh-host-paths bundle patch: mount the host-path seam plugin.
+#
+# Applied when this bundle appears in a profile's dsh.profile.bundles list.
+# The host half (package root) is a no-op loader entry; the browser half
+# (dsh.client) is discovered through the package's dsh.client declaration and
+# exports["./client"].
+
+- insert:
+    - id: host-paths
+      name: 'dsh-host-paths'
